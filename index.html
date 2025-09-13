@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ZomoTaste — Demo</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <div class="logo-mark">ZT</div>
+        <div class="logo-text">ZomoTaste</div>
+      </div>
+
+      <div class="search">
+        <input type="search" placeholder="Search dishes, tiffins, biryanis..." aria-label="Search">
+        <button class="search-btn">Search</button>
+      </div>
+
+      <nav class="user-actions">
+        <button class="btn ghost">Help</button>
+        <button class="btn primary">Sign in</button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-left">
+        <h1>Delicious meals delivered fast 🍛</h1>
+        <p class="lead">Meals, tiffins, biryanis, veg & non-veg starters — choose your flavour, we'll handle the rest.</p>
+
+        <div class="category-list">
+          <button class="chip active">Meals</button>
+          <button class="chip">Tiffins</button>
+          <button class="chip">Biryanis</button>
+          <button class="chip">Veg</button>
+          <button class="chip">Non-Veg</button>
+          <button class="chip">Starters</button>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="quick-card">
+          <img src="https://source.unsplash.com/400x300/?biryani" alt="biryani">
+          <div class="quick-card-body">
+            <h3>Royal Biryani</h3>
+            <p class="muted">Hyderabadi style • ₹250</p>
+            <div class="tags"><span class="veg">Non-Veg</span><span class="rating">4.6 ★</span></div>
+            <button class="btn success">Order Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <section class="grid-header">
+      <h2>Popular picks</h2>
+      <div class="filters">
+        <select aria-label="Sort">
+          <option>Sort: Recommended</option>
+          <option>Price: Low to High</option>
+          <option>Rating: High to Low</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="cards-grid" id="menu">
+      <!-- Card 1 -->
+      <article class="food-card">
+        <img src="https://source.unsplash.com/400x300/?south-indian,meal" alt="meal">
+        <div class="card-body">
+          <h3>Home-style Vegetarian Meal</h3>
+          <p class="muted">Rice, dal, sabzi, curd • ₹120</p>
+          <div class="card-bottom">
+            <div class="left-tags"><span class="veg">Veg</span><span class="time">25m</span></div>
+            <div><button class="btn small ghost">Add</button></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="food-card">
+        <img src="https://source.unsplash.com/400x300/?tiffin,homemade" alt="tiffin">
+        <div class="card-body">
+          <h3>Daily Tiffin (North)</h3>
+          <p class="muted">Roti, sabzi, salad • ₹100</p>
+          <div class="card-bottom">
+            <div class="left-tags"><span class="veg">Veg</span><span class="time">20m</span></div>
+            <div><button class="btn small ghost">Add</button></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="food-card">
+        <img src="https://source.unsplash.com/400x300/?chicken,curry" alt="nonveg">
+        <div class="card-body">
+          <h3>Chicken Biryani</h3>
+          <p class="muted">Spiced long-grain rice • ₹220</p>
+          <div class="card-bottom">
+            <div class="left-tags"><span class="nonveg">Non-Veg</span><span class="time">30m</span></div>
+            <div><button class="btn small primary">Add</button></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="food-card">
+        <img src="https://source.unsplash.com/400x300/?kebab,starter" alt="starter">
+        <div class="card-body">
+          <h3>Paneer Tikka</h3>
+          <p class="muted">Grilled spices • ₹180</p>
+          <div class="card-bottom">
+            <div class="left-tags"><span class="veg">Veg</span><span class="time">15m</span></div>
+            <div><button class="btn small ghost">Add</button></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 5 -->
+      <article class="food-card">
+        <img src="https://source.unsplash.com/400x300/?pulao,veg" alt="veg">
+        <div class="card-body">
+          <h3>Veg Pulao Meal</h3>
+          <p class="muted">Pulao, raita, papad • ₹140</p>
+          <div class="card-bottom">
+            <div class="left-tags"><span class="veg">Veg</span><span class="time">22m</span></div>
+            <div><button class="btn small ghost">Add</button></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 6 -->
+      <article class="food-card">
+        <img src="https://source.unsplash.com/400x300/?fish,curry" alt="nonveg">
+        <div class="card-body">
+          <h3>Fish Curry with Rice</h3>
+          <p class="muted">Coastal flavours • ₹240</p>
+          <div class="card-bottom">
+            <div class="left-tags"><span class="nonveg">Non-Veg</span><span class="time">28m</span></div>
+            <div><button class="btn small primary">Add</button></div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <footer class="page-footer">
+      <p>© ZomoTaste Demo — For learning purposes only</p>
+    </footer>
+  </main>
+
+  <script>
+    // tiny interactivity: category filtering (demo only)
+    document.querySelectorAll('.chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
+

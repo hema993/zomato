@@ -1,0 +1,44 @@
+pipeline {
+    agent any
+
+    environment {
+        DOCKERHUB_USER = 'hema84683'   
+        IMAGE_NAME     = 'zomato-ui'                 
+        IMAGE_TAG      = 'latest'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main', url: 'https://github.com/hema993/zomato.git'
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    sh "docker build -t ${DOCKERHUB_USER}/${IMAGE_NAME}:${IMAGE_TAG} ."
+                }
+            }
+        }
+
+        stage('Login to DockerHub') {
+            steps {
+                script {
+                    withCredentials([usernamePassword(credentialsId: 'dockerhub credentials', usernameVariable: 'USER', passwordVariable: 'PASS')]) {
+                        sh "echo $PASS | docker login -u $USER --password-stdin"
+                    }
+                }
+            }
+        }
+
+        stage('Push Docker Image') {
+            steps {
+                script {
+                    sh "docker push ${DOCKERHUB_USER}/${IMAGE_NAME}:${IMAGE_TAG}"
+                }
+            }
+        }
+    }
+}
+
